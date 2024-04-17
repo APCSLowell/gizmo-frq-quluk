@@ -24,11 +24,10 @@ public class OnlinePurchaseManager
   */
   public boolean hasAdjacentEqualPair()
   {
-    if(purchases.size()<2)
-      return false;
-    for(int i = 0; i< purchases.size(); i++){
-      if(purchases.get(i).equals(purchases.get(i+1)))
-        return true;
+    for (int i = 0; i < list.size() - 1; i++) {
+        if (list.get(i).equals(list.get(i + 1))) {
+            return true;
+        }
     }
     return false;
   }
